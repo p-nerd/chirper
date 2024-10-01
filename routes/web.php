@@ -25,8 +25,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::resource('chirps', ChirpController::class)
-    ->only(['index', 'store', 'update', 'destroy'])
-    ->middleware(['auth', 'verified']);
+Route::prefix('/chirps')->middleware(['auth', 'verified'])->group(function () {
+    Route::get('/', [ChirpController::class, 'index'])->name('chirps.index');
+    Route::post('/', [ChirpController::class, 'store'])->name('chirps.store');
+    Route::patch('/{chirp}', [ChirpController::class, 'update'])->name('chirps.update');
+    Route::delete('/{chirp}', [ChirpController::class, 'destroy'])->name('chirps.destroy');
+});
 
 require __DIR__.'/auth.php';
