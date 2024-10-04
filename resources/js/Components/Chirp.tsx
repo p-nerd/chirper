@@ -4,9 +4,9 @@ import { useForm, usePage } from "@inertiajs/react";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import { useState } from "react";
-import Dropdown from "@/Components/Dropdown";
-import InputError from "@/Components/InputError";
-import PrimaryButton from "@/Components/PrimaryButton";
+import Dropdown from "@/components/Dropdown";
+import InputError from "@/components/InputError";
+import PrimaryButton from "@/components/PrimaryButton";
 
 dayjs.extend(relativeTime);
 

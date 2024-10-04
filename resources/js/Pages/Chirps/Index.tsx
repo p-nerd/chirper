@@ -3,10 +3,10 @@ import type { TChirp } from "@/types/models";
 
 import { useForm, Head } from "@inertiajs/react";
 
-import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
-import InputError from "@/Components/InputError";
-import PrimaryButton from "@/Components/PrimaryButton";
-import Chirp from "@/Components/Chirp";
+import AuthenticatedLayout from "@/layouts/AuthenticatedLayout";
+import InputError from "@/components/InputError";
+import PrimaryButton from "@/components/PrimaryButton";
+import Chirp from "@/components/Chirp";
 
 export default function Index({ chirps }: PageProps<{ chirps: TChirp[] }>) {
     const { data, setData, post, processing, reset, errors } = useForm({
