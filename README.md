@@ -1,1 +1,1 @@
-Microblogging platform created to experiment with and explore various technologies.
+Micro blogging platform created to experiment with and explore various technologies.
